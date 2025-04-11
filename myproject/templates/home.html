@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart disease</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        form {
+            background: #fff;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart disease</h1>
+    <form action="result/" method="get">
+        {% csrf_token %}
+        <label for="input1">Age:</label>
+        <input type="text" name="input1" required><br><br>
+        <label for="input2">Sex:</label>
+        <input type="text" name="input2" required><br><br>
+        <label for="input3">Cp:</label>
+        <input type="text" name="input3" required><br><br>
+        <label for="input4">trestbps:</label>
+        <input type="text" name="input4" required><br><br>
+        <label for="input5">restecg:</label>
+        <input type="text" name="input5" required><br><br>
+        <label for="input6">thalach:</label>
+        <input type="text" name="input6" required><br><br>
+        <label for="input7">exang:</label>
+        <input type="text" name="input7" required><br><br>
+        <label for="input8">oldpeak:</label>
+        <input type="text" name="input8" required><br><br>
+        <label for="input9">slope:</label>
+        <input type="text" name="input9" required><br><br>
+        <label for="input10">ca:</label>
+        <input type="text" name="input10" required><br><br>
+        <label for="input11">Thal:</label>
+        <input type="text" name="input11" required><br><br>        
+        
+        <input type="submit" value="Predict">
+    </form>
+   
+
+
+  
+</body>
+</html>
